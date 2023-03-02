@@ -1,8 +1,8 @@
 <template>
-  <v-container grid-list-xl text-center>
+  <v-container grid-list-xl>
     <v-layout wrap>
       <v-flex xs12>
-        <h1 class="text-center">ExtraActivities</h1>
+        <h1>ExtraActivities</h1>
         <h2>Meet and Greet Phuket’s gentle Giants</h2>
         <h4>Visit the Phuket Elephant Sanctuary Learn about elephant protection. Enjoy responsible interaction with
           elephants.</h4>

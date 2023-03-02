@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:gap="http://phonegap.com/ns/1.0"
+        id="au.com.elliscreative.mcr20"
+        versionCode="1001"
+        version="1.0.1">
+
+    <id>au.com.elliscreative.mcr20</id>
+    <name>Choices Magic Carpet Ride 2023</name>
+    <author href="https://elliscreative.com.au" email="devs@elliscreative.com.au">
+        EllisCreative Pty Ltd
+    </author>
+    <platform name="ios"/>
+    <platform name="android"/>
+
+</widget>

@@ -1,463 +1,1598 @@
+<style scoped>
+.attending-members table {
+  width: 100%;
+}
+</style>
+
 <template>
-  <v-container grid-list-md>
-    <v-layout wrap class="attending-members">
+  <v-container grid-list-xl class="attending-members">
+    <v-layout wrap>
       <v-flex xs12>
-        <v-flex xs12 sm6 md4>
-          <v-text-field type="text"
-                        id="search"
-                        label="Search"
-                        v-model="search"
-                        solo
-                        append-icon="fa-search"
-                        clearable
-          ></v-text-field>
-        </v-flex>
+        <h1>2023 Attendees</h1>
       </v-flex>
       <v-flex xs12>
-        <v-list two-line subheader>
-          <v-list-item v-for="member in filteredMembers" :key="member.name + member.store" @click="viewMember(member)">
-            <v-list-item-avatar>
-              <v-icon>fa-user</v-icon>
-            </v-list-item-avatar>
-            <v-list-item-content>
-              <v-list-item-title>
-                {{ member.name }}
-              </v-list-item-title>
-              <v-list-item-subtitle>
-                {{ member.store }}
-              </v-list-item-subtitle>
-            </v-list-item-content>
-            <v-list-item-action>
-              <v-icon>fa-chevron-right</v-icon>
-            </v-list-item-action>
-          </v-list-item>
-        </v-list>
-      </v-flex>
-    </v-layout>
-
-    <v-dialog v-model="dialog">
-      <v-card dark>
-        <v-card-text>
-          <v-container grid-list-md>
+        <v-layout wrap>
+          <v-flex xs12 lg6 class="pr-xl-14">
             <v-layout wrap>
-              <v-flex xs2>
-                <v-icon large>fa-user-circle</v-icon>
+              <v-flex xs12 lg6>
+                <h2>NSW MEMBERS</h2>
+                <table>
+                  <tr>
+                    <td>Albury</td>
+                    <td>Ian Paterson</td>
+                  </tr>
+                  <tr>
+                    <td>Albury </td>
+                    <td>Lee Paterson</td>
+                  </tr>
+                  <tr>
+                    <td>Alexandria </td>
+                    <td>Rob Andrew</td>
+                  </tr>
+                  <tr>
+                    <td>Alexandria </td>
+                    <td>Kathryn Andrew</td>
+                  </tr>
+                  <tr>
+                    <td>Armidale </td>
+                    <td>Paul Riggall</td>
+                  </tr>
+                  <tr>
+                    <td>Armidale </td>
+                    <td>Emily Riggall</td>
+                  </tr>
+                  <tr>
+                    <td>Armidale </td>
+                    <td>Harrison Riggall</td>
+                  </tr>
+                  <tr>
+                    <td>Armidale </td>
+                    <td>Evie Riggall</td>
+                  </tr>
+                  <tr>
+                    <td>Balgowlah </td>
+                    <td>Amanda Evans</td>
+                  </tr>
+                  <tr>
+                    <td>Balgowlah </td>
+                    <td>Adam Evans</td>
+                  </tr>
+                  <tr>
+                    <td>Balgowlah </td>
+                    <td>Rusty-Jay Evans</td>
+                  </tr>
+                  <tr>
+                    <td>Batemans </td>
+                    <td>Bay Lynn Hawkins</td>
+                  </tr>
+                  <tr>
+                    <td>Batemans </td>
+                    <td>Bay Barry Hawkins</td>
+                  </tr>
+                  <tr>
+                    <td>Blacktown </td>
+                    <td>Anthony Wright</td>
+                  </tr>
+                  <tr>
+                    <td>Blacktown</td>
+                    <td> Kelly Wright</td>
+                  </tr>
+                  <tr>
+                    <td>Blacktown </td>
+                    <td>Bailey Wright</td>
+                  </tr>
+                  <tr>
+                    <td>Blacktown </td>
+                    <td>Mackenzie Wright</td>
+                  </tr>
+                  <tr>
+                    <td>Caringbah </td>
+                    <td>Leanne Price</td>
+                  </tr>
+                  <tr>
+                    <td>Caringbah </td>
+                    <td>Susan Donnelly</td>
+                  </tr>
+                  <tr>
+                    <td>Caringbah </td>
+                    <td>Stephen Donnelly</td>
+                  </tr>
+                  <tr>
+                    <td>Caringbah </td>
+                    <td>Kenneth Donnelly</td>
+                  </tr>
+                  <tr>
+                    <td>Erina </td>
+                    <td>Amy Michael</td>
+                  </tr>
+                  <tr>
+                    <td>Erina </td>
+                    <td>Jared Michael</td>
+                  </tr>
+                  <tr>
+                    <td>Erina </td>
+                    <td>Tyson Michael</td>
+                  </tr>
+                  <tr>
+                    <td>Erina </td>
+                    <td>Bayley Michael</td>
+                  </tr>
+                  <tr>
+                    <td>Forster </td>
+                    <td>Todd Maynard</td>
+                  </tr>
+                  <tr>
+                    <td>Forster </td>
+                    <td>Jane Maynard</td>
+                  </tr>
+                  <tr>
+                    <td>Forster </td>
+                    <td>Connor Maynard</td>
+                  </tr>
+                  <tr>
+                    <td>North Richmond </td>
+                    <td>Rob Godfrey</td>
+                  </tr>
+                  <tr>
+                    <td>North Richmond </td>
+                    <td>Sarah Godfrey</td>
+                  </tr>
+                  <tr>
+                    <td>North Richmond </td>
+                    <td>Charlotte Godfrey</td>
+                  </tr>
+                  <tr>
+                    <td>North Richmond </td>
+                    <td>Andrew Jones</td>
+                  </tr>
+                  <tr>
+                    <td>North Richmond </td>
+                    <td>Danielle Jones</td>
+                  </tr>
+                  <tr>
+                    <td>North Richmond </td>
+                    <td>Taryn Jones</td>
+                  </tr>
+                  <tr>
+                    <td>North Richmond </td>
+                    <td>Riley Jones</td>
+                  </tr>
+                  <tr>
+                    <td>Nowra South </td>
+                    <td>Warwick McMillan</td>
+                  </tr>
+                  <tr>
+                    <td>Nowra South </td>
+                    <td>Charlene McMillan</td>
+                  </tr>
+                  <tr>
+                    <td>Nowra South </td>
+                    <td>Savannah McMillan</td>
+                  </tr>
+                  <tr>
+                    <td>Nowra South </td>
+                    <td>Charlotte McMillan</td>
+                  </tr>
+                  <tr>
+                    <td>Nowra South </td>
+                    <td>Bianca McMillan</td>
+                  </tr>
+                  <tr>
+                    <td>Port Macquarie </td>
+                    <td>Suzanne Treasure</td>
+                  </tr>
+                  <tr>
+                    <td>Port Macquarie </td>
+                    <td>Peter Treasure</td>
+                  </tr>
+                </table>
               </v-flex>
-              <v-flex xs10>
-                <h2 class="text--white">{{ currentMember.name }}</h2>
-                <div><i>{{ currentMember.store }}</i></div>
-              </v-flex>
-
-              <v-flex xs12 mb-5>
-                <v-divider></v-divider>
-              </v-flex>
-
-              <v-flex v-if="currentMember.phone">
-                <v-list two-line subheader>
-                  <v-list-item @click="call">
-                    <v-list-item-icon>
-                      <v-icon>fa-phone</v-icon>
-                    </v-list-item-icon>
-                    <v-list-item-content>
-                      <v-list-item-title>
-                        Call
-                      </v-list-item-title>
-                      <v-list-item-subtitle>
-                        {{ currentMember.phone }}
-                      </v-list-item-subtitle>
-                    </v-list-item-content>
-                    <v-list-item-action>
-                      <v-icon>fa-chevron-right</v-icon>
-                    </v-list-item-action>
-                  </v-list-item>
-
-                  <v-list-item @click="text">
-                    <v-list-item-icon>
-                      <v-icon>fa-sms</v-icon>
-                    </v-list-item-icon>
-                    <v-list-item-content>
-                      <v-list-item-title>
-                        Text
-                      </v-list-item-title>
-                      <v-list-item-subtitle>
-                        {{ currentMember.phone }}
-                      </v-list-item-subtitle>
-                    </v-list-item-content>
-                    <v-list-item-action>
-                      <v-icon>fa-chevron-right</v-icon>
-                    </v-list-item-action>
-                  </v-list-item>
-
-                  <v-list-item @click="addContact">
-                    <v-list-item-icon>
-                      <v-icon>fa-user-plus</v-icon>
-                    </v-list-item-icon>
-                    <v-list-item-content>
-                      <v-list-item-title>
-                        Add To Contacts
-                      </v-list-item-title>
-                      <v-list-item-subtitle>
-                        {{ currentMember.phone }}
-                      </v-list-item-subtitle>
-                    </v-list-item-content>
-                    <v-list-item-action>
-                      <v-icon>fa-chevron-right</v-icon>
-                    </v-list-item-action>
-                  </v-list-item>
-                </v-list>
+              <v-flex xs12 lg6>
+                <table>
+                  <tr>
+                    <td>Port Macquarie </td>
+                    <td>Bartholomew Loadsman</td>
+                  </tr>
+                  <tr>
+                    <td>Port Macquarie </td>
+                    <td>Hayley Loadsman</td>
+                  </tr>
+                  <tr>
+                    <td>Port Stephens </td>
+                    <td>Ian Doherty</td>
+                  </tr>
+                  <tr>
+                    <td>Port Stephens </td>
+                    <td>Elissa Doherty</td>
+                  </tr>
+                  <tr>
+                    <td>Port Stephens </td>
+                    <td>Jye Doherty</td>
+                  </tr>
+                  <tr>
+                    <td>Port Stephens </td>
+                    <td>Hugh Doherty</td>
+                  </tr>
+                  <tr>
+                    <td>Port Stephens </td>
+                    <td>William Doherty</td>
+                  </tr>
+                  <tr>
+                    <td>Silverwater </td>
+                    <td>Ian Harrison</td>
+                  </tr>
+                  <tr>
+                    <td>Silverwater </td>
+                    <td>Diesel Harrison</td>
+                  </tr>
+                  <tr>
+                    <td>Silverwater </td>
+                    <td>Levi Harrison</td>
+                  </tr>
+                  <tr>
+                    <td>Southern Highlands </td>
+                    <td>Rod Preston</td>
+                  </tr>
+                  <tr>
+                    <td>Southern Highlands </td>
+                    <td>Lisa Fay</td>
+                  </tr>
+                  <tr>
+                    <td>Southern Highlands </td>
+                    <td>Hugo Fay</td>
+                  </tr>
+                  <tr>
+                    <td>Southern Highlands </td>
+                    <td>Warwick Preston</td>
+                  </tr>
+                  <tr>
+                    <td>Tamworth </td>
+                    <td>Joanne Russell</td>
+                  </tr>
+                  <tr>
+                    <td>Tamworth </td>
+                    <td>David Russell</td>
+                  </tr>
+                  <tr>
+                    <td>Tamworth </td>
+                    <td>Shane Chillingworth</td>
+                  </tr>
+                  <tr>
+                    <td>Tamworth </td>
+                    <td>Ann Chillingworth</td>
+                  </tr>
+                  <tr>
+                    <td>Tuggerah </td>
+                    <td>Robert Ditton</td>
+                  </tr>
+                  <tr>
+                    <td>Tuggerah </td>
+                    <td>Ann Ditton</td>
+                  </tr>
+                  <tr>
+                    <td>Tuggerah </td>
+                    <td>Steven New</td>
+                  </tr>
+                  <tr>
+                    <td>Tuggerah </td>
+                    <td>Megan New</td>
+                  </tr>
+                  <tr>
+                    <td>Tuggerah </td>
+                    <td>Jackson New</td>
+                  </tr>
+                  <tr>
+                    <td>Tuggerah</td>
+                    <td> Abbey New</td>
+                  </tr>
+                  <tr>
+                    <td>Wagga </td>
+                    <td>David Lenton</td>
+                  </tr>
+                  <tr>
+                    <td>Wagga </td>
+                    <td>Nicole Lenton</td>
+                  </tr>
+                  <tr>
+                    <td>Wagga </td>
+                    <td>Sidney Lenton</td>
+                  </tr>
+                  <tr>
+                    <td>Wagga </td>
+                    <td>Ruby Lenton</td>
+                  </tr>
+                  <tr>
+                    <td>Wagga </td>
+                    <td>Angus Lenton</td>
+                  </tr>
+                </table>
+                <div class="mb-5"></div>
+                <h2>NT MEMBERS</h2>
+                <table>
+                  <tr>
+                    <td>Darwin </td>
+                    <td>Anthony Frangoulis</td>
+                  </tr>
+                  <tr>
+                    <td>Darwin </td>
+                    <td>Kellie White</td>
+                  </tr>
+                  <tr>
+                    <td>Darwin </td>
+                    <td>Jack Frangoulis</td>
+                  </tr>
+                  <tr>
+                    <td>Darwin </td>
+                    <td>Aliyah Frangoulis</td>
+                  </tr>
+                  <tr>
+                    <td>Darwin </td>
+                    <td>Scarlett Nolan</td>
+                  </tr>
+                </table>
               </v-flex>
             </v-layout>
-          </v-container>
-        </v-card-text>
-      </v-card>
-    </v-dialog>
+          </v-flex>
+          <v-flex xs12 lg6 class="pl-xl-14">
 
-  </v-container>
-</template>
+          </v-flex>
+
+          <v-flex xs12 class="mb-lg-7"></v-flex>
+
+          <v-flex xs12 lg6 class="pr-xl-14">
+            <v-layout wrap>
+              <v-flex xs12 lg6>
+                <h2>NZ MEMBERS</h2>
+                <table>
+                  <tr>
+                    <td>By Charteris </td>
+                    <td>Graham Meecham</td>
+                  </tr>
+                  <tr>
+                    <td> By Charteris </td>
+                    <td>Jenny Meecham</td>
+                  </tr>
+                  <tr>
+                    <td> New Plymouth </td>
+                    <td>Fiona Proctor</td>
+                  </tr>
+                  <tr>
+                    <td> New Plymouth </td>
+                    <td>Mark Godfrey</td>
+                  </tr>
+                  <tr>
+                    <td> New Plymouth </td>
+                    <td>Tim Proctor</td>
+                  </tr>
+                </table>
+                <div class="mb-5"></div>
+                <h2>QLD MEMBERS</h2>
+                <table>
+                  <tr>
+                    <td>Alderley </td>
+                    <td>Gemma O’Brien</td>
+                  </tr>
+                  <tr>
+                    <td> Alderley </td>
+                    <td>James O’Brien</td>
+                  </tr>
+                  <tr>
+                    <td> Atherton </td>
+                    <td>Kristy Harris</td>
+                  </tr>
+                  <tr>
+                    <td> Atherton </td>
+                    <td>Wade Harris</td>
+                  </tr>
+                  <tr>
+                    <td> Atherton </td>
+                    <td>Chanel Harris</td>
+                  </tr>
+                  <tr>
+                    <td> Atherton </td>
+                    <td>Joshua Harris</td>
+                  </tr>
+                  <tr>
+                    <td> Bald Hills </td>
+                    <td>Ben Condon</td>
+                  </tr>
+                  <tr>
+                    <td> Bald Hills </td>
+                    <td>Archie Condon</td>
+                  </tr>
+                  <tr>
+                    <td> Bald Hills </td>
+                    <td>Molly Condon</td>
+                  </tr>
+                  <tr>
+                    <td> Bald Hills </td>
+                    <td>Oscar Condon</td>
+                  </tr>
+                  <tr>
+                    <td> Bundall </td>
+                    <td>Sam Fitzpatrick</td>
+                  </tr>
+                  <tr>
+                    <td> Bundall </td>
+                    <td>Nikita Maynard</td>
+                  </tr>
+                  <tr>
+                    <td> Bundall </td>
+                    <td>Frankie Fitzpatrick</td>
+                  </tr>
+                  <tr>
+                    <td> Bundall </td>
+                    <td>David McGain</td>
+                  </tr>
+                  <tr>
+                    <td> Bundall </td>
+                    <td>Reade Chandler</td>
+                  </tr>
+                  <tr>
+                    <td> by Mallets </td>
+                    <td>Steve Mallet</td>
+                  </tr>
+                  <tr>
+                    <td> by Mallets </td>
+                    <td>Jaye Mallet</td>
+                  </tr>
+                  <tr>
+                    <td> Cairns </td>
+                    <td>Craig Gower</td>
+                  </tr>
+                  <tr>
+                    <td> Cairns </td>
+                    <td>Simintra Gower</td>
+                  </tr>
+                  <tr>
+                    <td> Cairns </td>
+                    <td>Terrance Kane</td>
+                  </tr>
+                  <tr>
+                    <td> Cairns </td>
+                    <td>Lanna Gower</td>
+                  </tr>
+                  <tr>
+                    <td> Cairns </td>
+                    <td>Deeyen Gower</td>
+                  </tr>
+                  <tr>
+                    <td> Fortitude Valley </td>
+                    <td>Debbie Sumegi</td>
+                  </tr>
+                  <tr>
+                    <td> Fortitude Valley </td>
+                    <td>John Sumegi</td>
+                  </tr>
+                  <tr>
+                    <td> Fortitude Valley </td>
+                    <td>Jacquelyne Sproles</td>
+                  </tr>
+                  <tr>
+                    <td> Fortitude Valley </td>
+                    <td>Chaim Sproles</td>
+                  </tr>
+                  <tr>
+                    <td> Fortitude Valley </td>
+                    <td>Oliver Sproles</td>
+                  </tr>
+                </table>
+              </v-flex>
+              <v-flex xs12 lg6>
+                <table>
+                  <tr>
+                    <td>Fortitude Valley </td>
+                    <td>Archer Sproles</td>
+                  </tr>
+                  <tr>
+                    <td> Fortitude Valley </td>
+                    <td>Everly Sproles</td>
+                  </tr>
+                  <tr>
+                    <td> Fortitude Valley </td>
+                    <td>Michelle Sumegi</td>
+                  </tr>
+                  <tr>
+                    <td> Fortitude Valley </td>
+                    <td>Matthew Rex</td>
+                  </tr>
+                  <tr>
+                    <td> Fortitude Valley </td>
+                    <td>Nicholas Sumegi</td>
+                  </tr>
+                  <tr>
+                    <td> Fortitude Valley </td>
+                    <td>Amy Dorrington</td>
+                  </tr>
+                  <tr>
+                    <td> Toowoomba </td>
+                    <td>Malcolm Davison</td>
+                  </tr>
+                  <tr>
+                    <td> Toowoomba </td>
+                    <td>Prudence Davison</td>
+                  </tr>
+                  <tr>
+                    <td> Warwick </td>
+                    <td>Jodie Brown</td>
+                  </tr>
+                  <tr>
+                    <td> Warwick </td>
+                    <td>Duane Brown</td>
+                  </tr>
+                </table>
+                <div class="mb-5"></div>
+                <h2>TAS MEMBERS</h2>
+                <table>
+                  <tr>
+                    <td> Hobart </td>
+                    <td>Peter Christian</td>
+                  </tr>
+                  <tr>
+                    <td> Hobart</td>
+                    <td> Hue Christian</td>
+                  </tr>
+                  <tr>
+                    <td> Hobart </td>
+                    <td>Shane Spaulding</td>
+                  </tr>
+                  <tr>
+                    <td> Hobart </td>
+                    <td>Deearne Spaulding</td>
+                  </tr>
+                  <tr>
+                    <td> Hobart </td>
+                    <td>Stephen Wyles</td>
+                  </tr>
+                  <tr>
+                    <td> Hobart </td>
+                    <td>Lisa Izmirian</td>
+                  </tr>
+                  <tr>
+                    <td> Launceston </td>
+                    <td>Chris Smart</td>
+                  </tr>
+                  <tr>
+                    <td> Launceston </td>
+                    <td>Lesley Smart</td>
+                  </tr>
+                  <tr>
+                    <td> Launceston </td>
+                    <td>Ben Holt</td>
+                  </tr>
+                  <tr>
+                    <td> Launceston </td>
+                    <td>Gina Crosswell</td>
+                  </tr>
+                  <tr>
+                    <td> Launceston </td>
+                    <td>William Holt</td>
+                  </tr>
+                  <tr>
+                    <td> Launceston </td>
+                    <td>Lenny Holt</td>
+                  </tr>
+                  <tr>
+                    <td> Kingston </td>
+                    <td>Paul Lonergan</td>
+                  </tr>
+                  <tr>
+                    <td> Kingston </td>
+                    <td>Lynda Lonergan</td>
+                  </tr>
+                </table>
+              </v-flex>
+            </v-layout>
+          </v-flex>
+          <v-flex xs12 lg6 class="pl-xl-14">
+            <v-layout wrap>
+              <v-flex xs12 lg6>
+                <h2>VIC MEMBERS</h2>
+                <table>
+                  <tr>
+                    <td> Dandy </td>
+                    <td>Mark Winterton</td>
+                  </tr>
+                  <tr>
+                    <td> Dandy </td>
+                    <td>Tracey Winterton</td>
+                  </tr>
+                  <tr>
+                    <td> Doncaster </td>
+                    <td>Kirsty Shearer</td>
+                  </tr>
+                  <tr>
+                    <td> Doncaster </td>
+                    <td>Scott Shearer</td>
+                  </tr>
+                  <tr>
+                    <td> Doncaster </td>
+                    <td>Zac Shearer</td>
+                  </tr>
+                  <tr>
+                    <td> Doncaster </td>
+                    <td>George Shearer</td>
+                  </tr>
+                  <tr>
+                    <td> Ferntree Gully </td>
+                    <td>Roxanne Moroney</td>
+                  </tr>
+                  <tr>
+                    <td> Ferntree Gully </td>
+                    <td>Baiden Moroney</td>
+                  </tr>
+                  <tr>
+                    <td> Ferntree Gully </td>
+                    <td>Kiera Moroney</td>
+                  </tr>
+                  <tr>
+                    <td> Ferntree Gully </td>
+                    <td>Ethan Moroney</td>
+                  </tr>
+                  <tr>
+                    <td> Ferntree Gully </td>
+                    <td>Brian Moroney</td>
+                  </tr>
+                  <tr>
+                    <td> By Fletchers </td>
+                    <td>Lincoln Smith</td>
+                  </tr>
+                  <tr>
+                    <td> By Fletchers </td>
+                    <td>Emma Smith</td>
+                  </tr>
+                  <tr>
+                    <td> By Fletchers </td>
+                    <td>Summer Smith</td>
+                  </tr>
+                  <tr>
+                    <td> By Fletchers </td>
+                    <td>LibBy Smith</td>
+                  </tr>
+                  <tr>
+                    <td> By Fletchers </td>
+                    <td>Graham Smith</td>
+                  </tr>
+                  <tr>
+                    <td> By Fletchers </td>
+                    <td>Olivia Smith</td>
+                  </tr>
+                  <tr>
+                    <td> By Max Miller </td>
+                    <td>Natalie Thomas</td>
+                  </tr>
+                  <tr>
+                    <td> By Max Miller </td>
+                    <td>Joy Minter</td>
+                  </tr>
+                  <tr>
+                    <td> By Max Miller </td>
+                    <td>Gemma Thomas</td>
+                  </tr>
+                  <tr>
+                    <td> By Max Miller </td>
+                    <td>Ryan Thomas</td>
+                  </tr>
+                  <tr>
+                    <td> Narre Warren </td>
+                    <td>Kate Winterton</td>
+                  </tr>
+                  <tr>
+                    <td> Narre Warren </td>
+                    <td>Marcus Winterton</td>
+                  </tr>
+                  <tr>
+                    <td> Narre Warren </td>
+                    <td>Ethan Winterton</td>
+                  </tr>
+                  <tr>
+                    <td> Narre Warren </td>
+                    <td>Lachy Winterton</td>
+                  </tr>
+                  <tr>
+                    <td> Narre Warren </td>
+                    <td>Ivy Winterton</td>
+                  </tr>
+                  <tr>
+                    <td> Parkdale </td>
+                    <td>Shane Valenti</td>
+                  </tr>
+                  <tr>
+                    <td> Parkdale </td>
+                    <td>Sarah Doherty</td>
+                  </tr>
+                  <tr>
+                    <td> Parkdale </td>
+                    <td>Mila Valenti</td>
+                  </tr>
+                  <tr>
+                    <td> By Paulls </td>
+                    <td>Steph Paull</td>
+                  </tr>
+                  <tr>
+                    <td> By Paulls </td>
+                    <td>Bruce Paull</td>
+                  </tr>
+                  <tr>
+                    <td> By Paulls </td>
+                    <td>Irene Cannon</td>
+                  </tr>
+                  <tr>
+                    <td> By Paulls </td>
+                    <td>Mitchell Guillerme</td>
+                  </tr>
+                  <tr>
+                    <td> Shepparton </td>
+                    <td>Annette Ellis</td>
+                  </tr>
+                  <tr>
+                    <td> Shepparton </td>
+                    <td>Bob Ellis</td>
+                  </tr>
+                  <tr>
+                    <td> By Smiths </td>
+                    <td>Geoff Smith</td>
+                  </tr>
+                  <tr>
+                    <td> By Smiths </td>
+                    <td>Sally Smith</td>
+                  </tr>
+                  <tr>
+                    <td> By Smiths </td>
+                    <td>Ned Smith</td>
+                  </tr>
+                  <tr>
+                    <td> By Smiths </td>
+                    <td>Belinda Carlile</td>
+                  </tr>
+                </table>
+              </v-flex>
+              <v-flex xs12 lg6>
+                <table>
+                  <tr>
+                    <td>Warrnambool</td>
+                    <td>Billy Edis</td>
+                  </tr>
+                  <tr>
+                    <td>Warrnambool</td>
+                    <td>Amy Edis</td>
+                  </tr>
+                  <tr>
+                    <td>Warrnambool</td>
+                    <td>Archie Edis</td>
+                  </tr>
+                  <tr>
+                    <td>Warrnambool</td>
+                    <td>Nellie Edis</td>
+                  </tr>
+                  <tr>
+                    <td>Warrnambool</td>
+                    <td>Jimmy Edis</td>
+                  </tr>
+                  <tr>
+                    <td>By Watsons</td>
+                    <td>Donna Wight</td>
+                  </tr>
+                  <tr>
+                    <td>By Watsons</td>
+                    <td>Chris Wight</td>
+                  </tr>
+                  <tr>
+                    <td>By Westside (Horsham)</td>
+                    <td>Craig Decker</td>
+                  </tr>
+                  <tr>
+                    <td>By Westside (Horsham)</td>
+                    <td>Sal Penny</td>
+                  </tr>
+                  <tr>
+                    <td>By Westside (Stawell)</td>
+                    <td>John Griffiths</td>
+                  </tr>
+                  <tr>
+                    <td>By Westside (Stawell)</td>
+                    <td>Angela Griffiths</td>
+                  </tr>
+                  <tr>
+                    <td>By Westside (Stawell)</td>
+                    <td>Hollie Griffiths</td>
+                  </tr>
+                  <tr>
+                    <td>By Westside (Stawell)</td>
+                    <td>KirBy Griffiths</td>
+                  </tr>
+                  <tr>
+                    <td>By Westside (Stawell)</td>
+                    <td>Bethany Griffiths</td>
+                  </tr>
+                  <tr>
+                    <td>By Westside (Stawell)</td>
+                    <td>Millie Lester</td>
+                  </tr>
+                </table>
+                <div class="mb-5"></div>
+                <h2>WA MEMBERS</h2>
+                <table>
+                  <tr>
+                    <td>Bunbury</td>
+                    <td>Raelene Knox</td>
+                  </tr>
+                  <tr>
+                    <td>Bunbury</td>
+                    <td>Dan Knox</td>
+                  </tr>
+                  <tr>
+                    <td>Bunbury</td>
+                    <td>Sienna Knox</td>
+                  </tr>
+                  <tr>
+                    <td>Bunbury</td>
+                    <td>Tiani Knox</td>
+                  </tr>
+                  <tr>
+                    <td>Esperance</td>
+                    <td>David Gairen</td>
+                  </tr>
+                  <tr>
+                    <td>Esperance</td>
+                    <td>Elisia Gairen</td>
+                  </tr>
+                  <tr>
+                    <td>Esperance</td>
+                    <td>Fraser Gairen</td>
+                  </tr>
+                  <tr>
+                    <td>Esperance</td>
+                    <td>Hudson Gairen</td>
+                  </tr>
+                  <tr>
+                    <td>Esperance</td>
+                    <td>Lacey Gairen</td>
+                  </tr>
+                  <tr>
+                    <td>Geraldton</td>
+                    <td>Mitch March</td>
+                  </tr>
+                  <tr>
+                    <td>Geraldton</td>
+                    <td>Abbey March</td>
+                  </tr>
+                  <tr>
+                    <td>Geraldton</td>
+                    <td>Layla March</td>
+                  </tr>
+                  <tr>
+                    <td>Joondalup</td>
+                    <td>Steve Blackwood</td>
+                  </tr>
+                  <tr>
+                    <td>Joondalup</td>
+                    <td>Sue Blackwood</td>
+                  </tr>
+                  <tr>
+                    <td>By Kennedys</td>
+                    <td>Colin Rule</td>
+                  </tr>
+                  <tr>
+                    <td>By Kennedys</td>
+                    <td>Denise Rule</td>
+                  </tr>
+                  <tr>
+                    <td>Rockingham</td>
+                    <td>Bevan Surtees</td>
+                  </tr>
+                  <tr>
+                    <td>Rockingham</td>
+                    <td>Veronica Surtees</td>
+                  </tr>
+                </table>
+              </v-flex>
+            </v-layout>
+          </v-flex>
+
+          <v-flex xs12 class="mb-lg-7"></v-flex>
+
+          <v-flex xs12 lg6 class="pr-xl-14">
+          <v-layout wrap>
+            <v-flex xs12 lg6>
+              <h2>Alliance Partners</h2>
+              <table>
+                <tr>
+                  <td>Airstep</td>
+                  <td>Whitey Haddock</td>
+                </tr>
+                <tr>
+                  <td>Airstep</td>
+                  <td>Kerry Haddock</td>
+                </tr>
+                <tr>
+                  <td>Airstep</td>
+                  <td>Ross Rymer</td>
+                </tr>
+                <tr>
+                  <td>Airstep</td>
+                  <td>Ann Rymer</td>
+                </tr>
+                <tr>
+                  <td>Airstep</td>
+                  <td>Steve Wootton</td>
+                </tr>
+                <tr>
+                  <td>Armstrong</td>
+                  <td>David Larter</td>
+                </tr>
+                <tr>
+                  <td>Beaulieu of Australia</td>
+                  <td>Mark Gannon</td>
+                </tr>
+                <tr>
+                  <td>Beaulieu of Australia</td>
+                  <td>Allan Russell</td>
+                </tr>
+                <tr>
+                  <td>Belgotex Floors Australia</td>
+                  <td>Paul Somerville</td>
+                </tr>
+                <tr>
+                  <td>Belgotex Floors Australia</td>
+                  <td>Rae Somerville</td>
+                </tr>
+                <tr>
+                  <td>Belgotex Floors Australia</td>
+                  <td>Andrew Muckert</td>
+                </tr>
+                <tr>
+                  <td>Belgotex Floors Australia</td>
+                  <td>Sally Muckert</td>
+                </tr>
+                <tr>
+                  <td>Classic Flooring</td>
+                  <td>Leanne Drysdale</td>
+                </tr>
+                <tr>
+                  <td>Classic Flooring</td>
+                  <td>Deepak Narwani</td>
+                </tr>
+                <tr>
+                  <td>Classic Flooring</td>
+                  <td>Neeraj Narwani</td>
+                </tr>
+                <tr>
+                  <td>Classic Flooring</td>
+                  <td>Bruce Drysdale</td>
+                </tr>
+                <tr>
+                  <td>Dunlop Flooring</td>
+                  <td>Andrew Spence</td>
+                </tr>
+                <tr>
+                  <td>Dunlop Flooring</td>
+                  <td>Tracy Spence</td>
+                </tr>
+                <tr>
+                  <td>Forbo Floorcoverings</td>
+                  <td>Chris Barker</td>
+                </tr>
+                <tr>
+                  <td>Forbo Floorcoverings</td>
+                  <td>Lucinda Barker</td>
+                </tr>
+                <tr>
+                  <td>George Low</td>
+                  <td>George Low</td>
+                </tr>
+                <tr>
+                  <td>George Low</td>
+                  <td>Sarah Low</td>
+                </tr>
+                <tr>
+                  <td>George Low</td>
+                  <td>Astrid Low</td>
+                </tr>
+                <tr>
+                  <td>George Low</td>
+                  <td>Eddie Low</td>
+                </tr>
+                <tr>
+                  <td>Godfrey Hirst Australia</td>
+                  <td>Gerry Fatouros</td>
+                </tr>
+                <tr>
+                  <td>Godfrey Hirst Australia</td>
+                  <td>Barbara Fatouros</td>
+                </tr>
+                <tr>
+                  <td>Karndean Australia</td>
+                  <td>Geoff Weir</td>
+                </tr>
+                <tr>
+                  <td>Karndean Australia</td>
+                  <td>Paul McCormack</td>
+                </tr>
+                <tr>
+                  <td>Mapei</td>
+                  <td>James Creswell</td>
+                </tr>
+                <tr>
+                  <td>Mapei</td>
+                  <td>Kelly Creswell</td>
+                </tr>
+                <tr>
+                  <td>Mapei</td>
+                  <td>Jak Creswell</td>
+                </tr>
+                <tr>
+                  <td>Mapei</td>
+                  <td>Lily Creswell</td>
+                </tr>
+                <tr>
+                  <td>MJS Floorcoverings</td>
+                  <td>Brett Sturgess</td>
+                </tr>
+                <tr>
+                  <td>MJS Floorcoverings</td>
+                  <td>Leanne Sturgess</td>
+                </tr>
+                <tr>
+                  <td>National Flooring Distributors</td>
+                  <td>Callum Driscoll</td>
+                </tr>
+                <tr>
+                  <td>National Flooring Distributors</td>
+                  <td>Renata Driscoll</td>
+                </tr>
+                <tr>
+                  <td>National Flooring Distributors</td>
+                  <td>Devon Driscoll</td>
+                </tr>
+                <tr>
+                  <td>National Flooring Distributors</td>
+                  <td>Havana Driscoll</td>
+                </tr>
+                <tr>
+                  <td>Pegulan Floorcoverings</td>
+                  <td>Andre Blasse</td>
+                </tr>
+                <tr>
+                  <td>Pegulan Floorcoverings</td>
+                  <td>Lara Blasse</td>
+                </tr>
+                <tr>
+                  <td>Polyflor Australia</td>
+                  <td>Mark Van Leerdam</td>
+                </tr>
+                <tr>
+                  <td>Polyflor Australia</td>
+                  <td>Leanne Webb</td>
+                </tr>
+                <tr>
+                  <td>Polyflor Australia</td>
+                  <td>Scott Foster</td>
+                </tr>
+              </table>
+            </v-flex>
+            <v-flex xs12 lg6>
+              <table>
+                <tr>
+                  <td>Polyflor Australia</td>
+                  <td>Ethan Thomas</td>
+                </tr>
+                <tr>
+                  <td>Polyflor Australia</td>
+                  <td>Paige Thomas</td>
+                </tr>
+                <tr>
+                  <td>Polyflor Australia</td>
+                  <td>Summer Thomas</td>
+                </tr>
+                <tr>
+                  <td>Polyflor Australia</td>
+                  <td>Imogen Foster</td>
+                </tr>
+                <tr>
+                  <td>Polyflor Australia</td>
+                  <td>Hudson Foster</td>
+                </tr>
+                <tr>
+                  <td>Polyflor Australia</td>
+                  <td>Sian Brighten</td>
+                </tr>
+                <tr>
+                  <td>Polyflor Australia</td>
+                  <td>Todd Brighten</td>
+                </tr>
+                <tr>
+                  <td>Polyflor Australia </td>
+                  <td>Giovana Van Leerdam</td>
+                </tr>
+                <tr>
+                  <td>Polyflor Australia </td>
+                  <td>Josh Van Leerdam</td>
+                </tr>
+                <tr>
+                  <td>Polyflor Australia </td>
+                  <td>Isabella Van Leerdam</td>
+                </tr>
+                <tr>
+                  <td>Polyflor Australia</td>
+                  <td>Richard Feng</td>
+                </tr>
+                <tr>
+                  <td>Polyflor Australia</td>
+                  <td>Serena Hei</td>
+                </tr>
+                <tr>
+                  <td>Polyflor Australia</td>
+                  <td>Nathan Feng</td>
+                </tr>
+                <tr>
+                  <td>Premium Floors</td>
+                  <td>Vanessa Beever</td>
+                </tr>
+                <tr>
+                  <td>Premium Floors</td>
+                  <td>David Trebbin</td>
+                </tr>
+                <tr>
+                  <td>Premium Floors</td>
+                  <td>Micheal Schnider</td>
+                </tr>
+                <tr>
+                  <td>Premium Floors</td>
+                  <td>Stacey Schnider</td>
+                </tr>
+                <tr>
+                  <td>Premium Floors</td>
+                  <td>Ari Schnider</td>
+                </tr>
+                <tr>
+                  <td>Premium Floors</td>
+                  <td>Max Schnider</td>
+                </tr>
+                <tr>
+                  <td>Proline Floors</td>
+                  <td>Matt Casaceli</td>
+                </tr>
+                <tr>
+                  <td>Proline Floors</td>
+                  <td>Kareen Casaceli</td>
+                </tr>
+                <tr>
+                  <td>Proline Floors</td>
+                  <td>Lachie Casaceli</td>
+                </tr>
+                <tr>
+                  <td>Proline Floors</td>
+                  <td>Clo Casaceli</td>
+                </tr>
+                <tr>
+                  <td>Proline Floors</td>
+                  <td>Holly Casaceli</td>
+                </tr>
+                <tr>
+                  <td>Proline Floors</td>
+                  <td>Skye Casaceli</td>
+                </tr>
+                <tr>
+                  <td>Proline Floors</td>
+                  <td>Tim Clark</td>
+                </tr>
+                <tr>
+                  <td>Proline Floors</td>
+                  <td>Adele Clark</td>
+                </tr>
+                <tr>
+                  <td>Proline Floors</td>
+                  <td>Olivia Clark</td>
+                </tr>
+                <tr>
+                  <td>Proline Floors</td>
+                  <td>Lachie Clark</td>
+                </tr>
+                <tr>
+                  <td>Proline Floors</td>
+                  <td>Rose Clark</td>
+                </tr>
+                <tr>
+                  <td>Quest Carpets</td>
+                  <td>Matthew Amos</td>
+                </tr>
+                <tr>
+                  <td>Quest Carpets</td>
+                  <td>Sarah Amos</td>
+                </tr>
+                <tr>
+                  <td>Quest Carpets</td>
+                  <td>Thomas Amos</td>
+                </tr>
+                <tr>
+                  <td>Quest Carpets</td>
+                  <td>Clara Amos</td>
+                </tr>
+                <tr>
+                  <td>Quest Carpets</td>
+                  <td>Anthony Thripp</td>
+                </tr>
+                <tr>
+                  <td>Quest Carpets</td>
+                  <td>Megan Thripp</td>
+                </tr>
+                <tr>
+                  <td>Quest Carpets</td>
+                  <td>Charlotte Thripp</td>
+                </tr>
+                <tr>
+                  <td>Quest Carpets</td>
+                  <td>Maddison Thripp</td>
+                </tr>
+                <tr>
+                  <td>Signature Floorcoverings</td>
+                  <td>Jacqui Sanders</td>
+                </tr>
+                <tr>
+                  <td>Signature Floorcoverings</td>
+                  <td>Mark Lustica</td>
+                </tr>
+                <tr>
+                  <td>Signature Floorcoverings</td>
+                  <td>Richard Ashworth</td>
+                </tr>
+                <tr>
+                  <td>Signature Floorcoverings</td>
+                  <td>Richard Braic</td>
+                </tr>
+                <tr>
+                  <td>Signature Floorcoverings</td>
+                  <td>Donna Lustica</td>
+                </tr>
+                <tr>
+                  <td>Signature Floorcoverings</td>
+                  <td>Caitlin Lustica</td>
+                </tr>
+                <tr>
+                  <td>Signature Floorcoverings</td>
+                  <td>Josh Lustica</td>
+                </tr>
+                <tr>
+                  <td>Signature Floorcoverings</td>
+                  <td>Chelsea Ashworth</td>
+                </tr>
+              </table>
+            </v-flex>
+          </v-layout>
+        </v-flex>
+        <v-flex xs12 lg6 class="pl-xl-14">
+          <v-layout wrap>
+            <v-flex xs12 lg6>
+              <table>
+                <tr>
+                  <td>Signature Floorcoverings</td>
+                  <td>Lochlan Ashworth</td>
+                </tr>
+                <tr>
+                  <td>Signature Floorcoverings</td>
+                  <td>Jacob Ashworth</td>
+                </tr>
+                <tr>
+                  <td>Signature Floorcoverings</td>
+                  <td>Emilee Ashworth</td>
+                </tr>
+                <tr>
+                  <td>Signature Floorcoverings</td>
+                  <td>Natalie Braic</td>
+                </tr>
+                <tr>
+                  <td>Signature Floorcoverings</td>
+                  <td>Shyla Braic</td>
+                </tr>
+                <tr>
+                  <td>Signature Floorcoverings</td>
+                  <td>Keanu Braic</td>
+                </tr>
+                <tr>
+                  <td>Tarkett Australia</td>
+                  <td>Mike Snee</td>
+                </tr>
+                <tr>
+                  <td>Total Window Concepts</td>
+                  <td>Scott Gurnett</td>
+                </tr>
+                <tr>
+                  <td>Total Window Concepts</td>
+                  <td>Delma Gurnett</td>
+                </tr>
+                <tr>
+                  <td>Tuftmaster Carpets</td>
+                  <td>Peter Bates</td>
+                </tr>
+                <tr>
+                  <td>Tuftmaster Carpets</td>
+                  <td>Nikki Boomsma</td>
+                </tr>
+                <tr>
+                  <td>Tuftmaster Carpets</td>
+                  <td>Maddi Bates</td>
+                </tr>
+                <tr>
+                  <td>Tuftmaster Carpets</td>
+                  <td>Jessi Bates</td>
+                </tr>
+                <tr>
+                  <td>Victoria Carpets</td>
+                  <td>Matt Taylor</td>
+                </tr>
+                <tr>
+                  <td>Victoria Carpets</td>
+                  <td>Bec Taylor</td>
+                </tr>
+                <tr>
+                  <td>Victoria Carpets</td>
+                  <td>Zoe Taylor</td>
+                </tr>
+                <tr>
+                  <td>Victoria Carpets</td>
+                  <td>Tom Taylor</td>
+                </tr>
+              </table>
+              <div class="mb-5"></div>
+              <h2>Media Partners</h2>
+              <table>
+                <tr>
+                  <td>Advertising Associates</td>
+                  <td>Camille Hogeland</td>
+                </tr>
+                <tr>
+                  <td>Advertising Associates</td>
+                  <td>Chris Hogeland</td>
+                </tr>
+                <tr>
+                  <td>Advertising Associates</td>
+                  <td>Jessie Hogeland</td>
+                </tr>
+                <tr>
+                  <td>Advertising Associates</td>
+                  <td>Sam Hogeland</td>
+                </tr>
+                <tr>
+                  <td>Advertising Associates</td>
+                  <td>Bella Hogeland</td>
+                </tr>
+                <tr>
+                  <td>Advertising Associates</td>
+                  <td>Andrew Dunne</td>
+                </tr>
+                <tr>
+                  <td>Advertising Associates</td>
+                  <td>Helen Dunne</td>
+                </tr>
+                <tr>
+                  <td>Advertising Associates</td>
+                  <td>Matt Dunne</td>
+                </tr>
+                <tr>
+                  <td>Advertising Associates</td>
+                  <td>Sean Dunne</td>
+                </tr>
+                <tr>
+                  <td>Advertising Associates</td>
+                  <td>Emily Dunne</td>
+                </tr>
+                <tr>
+                  <td>Ellis Creative</td>
+                  <td>Dan Ellis</td>
+                </tr>
+                <tr>
+                  <td>Ellis Creative</td>
+                  <td>Ivy Ellis</td>
+                </tr>
+                <tr>
+                  <td>Ellis Creative</td>
+                  <td>April Ellis</td>
+                </tr>
+                <tr>
+                  <td>Simple Biz</td>
+                  <td>Craig Smithers</td>
+                </tr>
+                <tr>
+                  <td>Simple Biz</td>
+                  <td>Roe Smithers</td>
+                </tr>
+                <tr>
+                  <td>Simple Biz</td>
+                  <td>Adrian Mazzocchetti</td>
+                </tr>
+                <tr>
+                  <td>Simple Biz</td>
+                  <td>Jasmine Mazzocchetti</td>
+                </tr>
+              </table>
+              <div class="mb-5"></div>
+              <h2>Band</h2>
+              <table>
+                <tr>
+                  <td>Australian Music Legend</td>
+                  <td>Ross Wilson</td>
+                </tr>
+                <tr>
+                  <td>Band</td>
+                  <td>Mark Sydow</td>
+                </tr>
+                <tr>
+                  <td>Band</td>
+                  <td>Judith Kennedy</td>
+                </tr>
+                <tr>
+                  <td>Band</td>
+                  <td>Stewart Wilkinson</td>
+                </tr>
+              </table>
+            </v-flex>
+            <v-flex xs12 lg6>
+              <table>
+                <tr>
+                  <td>Band</td>
+                  <td>Gorgia Holmes</td>
+                </tr>
+                <tr>
+                  <td>Band</td>
+                  <td>Haydn Meggitt</td>
+                </tr>
+                <tr>
+                  <td>Band</td>
+                  <td>Allison Meggitt</td>
+                </tr>
+                <tr>
+                  <td>Band</td>
+                  <td>Michael Pollard</td>
+                </tr>
+                <tr>
+                  <td>Band</td>
+                  <td>Lisa Rathgen</td>
+                </tr>
+                <tr>
+                  <td>Band</td>
+                  <td>Aaron Schembri</td>
+                </tr>
+                <tr>
+                  <td>Band</td>
+                  <td>Tim Curnick</td>
+                </tr>
+                <tr>
+                  <td>Band</td>
+                  <td>Damien Hutchinson</td>
+                </tr>
+              </table>
+              <div class="mb-5"></div>
+              <h2>Bentleigh Travel</h2>
+              <table>
+                <tr>
+                  <td>Bentleigh Travel</td>
+                  <td>Elsa Herod</td>
+                </tr>
+                <tr>
+                  <td>Bentleigh Travel</td>
+                  <td>Simon Herod</td>
+                </tr>
+                <tr>
+                  <td>Bentleigh Travel</td>
+                  <td>Holly Jane</td>
+                </tr>
+                <tr>
+                  <td>Bentleigh Travel</td>
+                  <td>Ian Jane</td>
+                </tr>
+                <tr>
+                  <td>Bentleigh Travel</td>
+                  <td>Emma Jane</td>
+                </tr>
+                <tr>
+                  <td>Bentleigh Travel</td>
+                  <td>Timothy Miller</td>
+                </tr>
+                <tr>
+                  <td>Bentleigh Travel</td>
+                  <td>Ruby Miller</td>
+                </tr>
+                <tr>
+                  <td>Bentleigh Travel</td>
+                  <td>Chloe Miller</td>
+                </tr>
+                <tr>
+                  <td>Bentleigh Travel</td>
+                  <td>Harriette Miller</td>
+                </tr>
+              </table>
+              <div class="mb-5"></div>
+              <h2>Central Office Staff</h2>
+              <table>
+                <tr>
+                  <td>Central Office</td>
+                  <td>Jason Verstak</td>
+                </tr>
+                <tr>
+                  <td>Central Office</td>
+                  <td>Ethan Verstak</td>
+                </tr>
+                <tr>
+                  <td>Central Office</td>
+                  <td>Milla Verstak</td>
+                </tr>
+                <tr>
+                  <td>Central Office</td>
+                  <td>Tania Delport</td>
+                </tr>
+                <tr>
+                  <td>Central Office</td>
+                  <td>Maddi Delport</td>
+                </tr>
+                <tr>
+                  <td>Central Office</td>
+                  <td>Talon Delport</td>
+                </tr>
+                <tr>
+                  <td>Central Office</td>
+                  <td>Andrew Lewis</td>
+                </tr>
+                <tr>
+                  <td>Central Office</td>
+                  <td>Jane Lewis</td>
+                </tr>
+                <tr>
+                  <td>Central Office</td>
+                  <td>Tim Drew</td>
+                </tr>
+                <tr>
+                  <td>Central Office</td>
+                  <td>Sam Lam</td>
+                </tr>
+                <tr>
+                  <td>Central Office</td>
+                  <td>Helen Nguyen</td>
+                </tr>
+                <tr>
+                  <td>Central Office</td>
+                  <td>Arthur Tran</td>
+                </tr>
+                <tr>
+                  <td>Central Office</td>
+                  <td>Matthew Tran</td>
+                </tr>
+                <tr>
+                  <td>Central Office</td>
+                  <td>Rachael Henry</td>
+                </tr>
+                <tr>
+                  <td>Central Office</td>
+                  <td>Andrew Verstak</td>
+                </tr>
+                <tr>
+                  <td>Central Office</td>
+                  <td>Cheryl Verstak</td>
+                </tr>
+                <tr>
+                  <td>Central Office</td>
+                  <td>John Nicholls</td>
+                </tr>
+                <tr>
+                  <td>Central Office</td>
+                  <td>Jaya Duggal</td>
+                </tr>
+                <tr>
+                  <td>Central Office</td>
+                  <td>Terry Triggs</td>
+                </tr>
+              </table>
+            </v-flex>
+          </v-layout>
+        </v-flex>
+      </v-layout>
+    </v-flex>
+  </v-layout>
+</v-container></template>
 
 <script>
-let faker = require('faker')
-import Fuse from 'fuse.js'
-
 export default {
   name: 'attending-members',
-  data () {
-    return {
-      currentMember: {},
-      dialog: false,
-      members: [
-
-        { 'name': 'Jason Verstak', 'store': 'Central Office', 'phone': '0498 136 395' },
-        { 'name': 'Ethan Verstak', 'store': 'Central Office', 'phone': '' },
-        { 'name': 'Milla Verstak', 'store': 'Central Office', 'phone': '' },
-        { 'name': 'Andrew Lewis', 'store': 'Central Office', 'phone': '0400 400 036' },
-        { 'name': 'Tim Drew', 'store': 'Central Office', 'phone': '0425 751 756' },
-        { 'name': 'Sam  Lam', 'store': 'Central Office', 'phone': '' },
-        { 'name': 'Helen Nguyen', 'store': 'Central Office', 'phone': '0436 364 352' },
-        { 'name': 'Paddy  Deery', 'store': 'Central Office', 'phone': '' },
-        { 'name': 'Arthur Tran', 'store': 'Central Office', 'phone': '' },
-        { 'name': 'Matthew Tran', 'store': 'Central Office', 'phone': '' },
-        { 'name': 'Ingrid Powell', 'store': 'Central Office', 'phone': '0407 539 495' },
-        { 'name': 'Justin Powell', 'store': 'Central Office', 'phone': '' },
-        { 'name': 'William Powell', 'store': 'Central Office', 'phone': '' },
-        { 'name': 'Benjamin Powell', 'store': 'Central Office', 'phone': '' },
-        { 'name': 'Jan Brewster', 'store': 'Central Office', 'phone': '' },
-        { 'name': 'Garry Brewster', 'store': 'Central Office', 'phone': '' },
-        { 'name': 'Karen Prelovsky', 'store': 'Central Office', 'phone': '' },
-        { 'name': 'George Prelovsky', 'store': 'Central Office', 'phone': '' },
-        { 'name': 'Andrew Verstak', 'store': 'Central Office', 'phone': '0499 828 000' },
-        { 'name': 'Cheryl Verstak', 'store': 'Central Office', 'phone': '' },
-        { 'name': 'John Nicholls', 'store': 'Central Office', 'phone': '64 273 228 679' },
-        { 'name': 'Karen McGill', 'store': 'Central Office', 'phone': '' },
-
-        { 'name': 'Ian Paterson', 'store': 'Choices Flooring Albury', 'phone': '0417 488 876' },
-        { 'name': 'Lee Paterson', 'store': 'Choices Flooring Albury', 'phone': '' },
-        { 'name': 'Gemma O\'Brien', 'store': 'Choices Flooring Alderley', 'phone': '0405 279 407' },
-        { 'name': 'James O\'Brien', 'store': 'Choices Flooring Alderley', 'phone': '' },
-        { 'name': 'Rob Andrew', 'store': 'Choices Flooring Alexandria', 'phone': '0425 212 266' },
-        { 'name': 'Kathryn Andrew', 'store': 'Choices Flooring Alexandria', 'phone': '' },
-        { 'name': 'Paul Riggall', 'store': 'Choices Flooring Armidale', 'phone': '0411 231 609' },
-        { 'name': 'Emily Riggall', 'store': 'Choices Flooring Armidale', 'phone': '' },
-        { 'name': 'Harrison Riggall', 'store': 'Choices Flooring Armidale', 'phone': '' },
-        { 'name': 'Evie  Riggall', 'store': 'Choices Flooring Armidale', 'phone': '' },
-        { 'name': 'Kristy Harris', 'store': 'Choices Flooring Atherton', 'phone': '0431 332 747' },
-        { 'name': 'Wade Harris', 'store': 'Choices Flooring Atherton', 'phone': '' },
-        { 'name': 'Chanel Harris', 'store': 'Choices Flooring Atherton', 'phone': '' },
-        { 'name': 'Joshua Harris', 'store': 'Choices Flooring Atherton', 'phone': '' },
-        { 'name': 'Ben Condon', 'store': 'Choices Flooring Bald Hills', 'phone': '0409 919 574' },
-        { 'name': 'Archie Condon', 'store': 'Choices Flooring Bald Hills', 'phone': '' },
-        { 'name': 'Molly Condon', 'store': 'Choices Flooring Bald Hills', 'phone': '' },
-        { 'name': 'Oscar Condon', 'store': 'Choices Flooring Bald Hills', 'phone': '' },
-        { 'name': 'Julia Connolly', 'store': 'Choices Flooring Bald Hills', 'phone': '' },
-        { 'name': 'Ava Connolly', 'store': 'Choices Flooring Bald Hills', 'phone': '' },
-        { 'name': 'Kade Sampson', 'store': 'Choices Flooring Bald Hills', 'phone': '' },
-        { 'name': 'Amanda Evans', 'store': 'Choices Flooring Balgowlah', 'phone': '0432 883 049' },
-        { 'name': 'Adam Evans', 'store': 'Choices Flooring Balgowlah', 'phone': '' },
-        { 'name': 'Rusty-Jay Evans', 'store': 'Choices Flooring Balgowlah', 'phone': '' },
-        { 'name': 'Lynn Hawkins', 'store': 'Choices Flooring Batemans Bay', 'phone': '' },
-        { 'name': 'Barry Hawkins', 'store': 'Choices Flooring Batemans Bay', 'phone': '0408 447 266' },
-        { 'name': 'Anthony Wright', 'store': 'Choices Flooring Blacktown', 'phone': '0404 888 995' },
-        { 'name': 'Kelly  Wright', 'store': 'Choices Flooring Blacktown', 'phone': '' },
-        { 'name': 'Bailey Wright', 'store': 'Choices Flooring Blacktown', 'phone': '' },
-        { 'name': 'Mackenzie Wright', 'store': 'Choices Flooring Blacktown', 'phone': '' },
-        { 'name': 'Scott Shearer', 'store': 'Choices Flooring Bulleen', 'phone': '0438 935 492' },
-        { 'name': 'Kirsty Shearer', 'store': 'Choices Flooring Bulleen', 'phone': '' },
-        { 'name': 'George Shearer', 'store': 'Choices Flooring Bulleen', 'phone': '' },
-        { 'name': 'Zac Shearer', 'store': 'Choices Flooring Bulleen', 'phone': '' },
-        { 'name': 'Raelene Knox', 'store': 'Choices Flooring Bunbury', 'phone': '' },
-        { 'name': 'Daniel  Knox', 'store': 'Choices Flooring Bunbury', 'phone': '0417 733 398' },
-        { 'name': 'Kiah Knox', 'store': 'Choices Flooring Bunbury', 'phone': '' },
-        { 'name': 'Tiani Knox', 'store': 'Choices Flooring Bunbury', 'phone': '' },
-        { 'name': 'Sienna Knox', 'store': 'Choices Flooring Bunbury', 'phone': '' },
-        { 'name': 'Nakita Maynard', 'store': 'Choices Flooring Bundall', 'phone': '0408 722 633' },
-        { 'name': 'Sam Fitzpatrick', 'store': 'Choices Flooring Bundall', 'phone': '' },
-        { 'name': 'Scott Watson', 'store': 'Choices Flooring Burleigh Heads', 'phone': '0434 269 378' },
-        { 'name': 'Martine Watson', 'store': 'Choices Flooring Burleigh Heads', 'phone': '' },
-        { 'name': 'Phillip Bradley', 'store': 'Choices Flooring Burnie', 'phone': '0418 148 835' },
-        { 'name': 'Paul Lonergan', 'store': 'Choices Flooring by Advance', 'phone': '0418 126 661' },
-        { 'name': 'Lynda Lonergan', 'store': 'Choices Flooring by Advance', 'phone': '' },
-        { 'name': 'Amy Watson', 'store': 'Choices Flooring by Advance', 'phone': '' },
-        { 'name': 'James Watson', 'store': 'Choices Flooring by Advance', 'phone': '' },
-        { 'name': 'Christopher Aggenbach', 'store': 'Choices Flooring by Aggenbachs', 'phone': '0409 171 256' },
-        { 'name': 'Marian Winter', 'store': 'Choices Flooring by Aggenbachs', 'phone': '' },
-        { 'name': 'Graham Meecham', 'store': 'Choices Flooring by Charteris', 'phone': '64 021 774 423' },
-        { 'name': 'Jennifer Meecham', 'store': 'Choices Flooring by Charteris', 'phone': '' },
-        { 'name': 'Tracey Winterton', 'store': 'Choices Flooring by Dandy', 'phone': '0413 794 862' },
-        { 'name': 'Mark Winterton', 'store': 'Choices Flooring by Dandy', 'phone': '' },
-        { 'name': 'Steven Winterton', 'store': 'Choices Flooring by Dandy', 'phone': '' },
-        { 'name': 'Rob Godfrey', 'store': 'Choices Flooring by Godfreys', 'phone': '' },
-        { 'name': 'Sarah Godfrey', 'store': 'Choices Flooring by Godfreys', 'phone': '0414 361 315' },
-        { 'name': 'Charlotte Godfrey', 'store': 'Choices Flooring by Godfreys', 'phone': '' },
-        { 'name': 'Andrew  Jones', 'store': 'Choices Flooring by Godfreys', 'phone': '' },
-        { 'name': 'Danielle Jones', 'store': 'Choices Flooring by Godfreys', 'phone': '' },
-        { 'name': 'Taryn Jones', 'store': 'Choices Flooring by Godfreys', 'phone': '' },
-        { 'name': 'Riley Jones', 'store': 'Choices Flooring by Godfreys', 'phone': '' },
-        { 'name': 'Steven Mallet', 'store': 'Choices Flooring by Mallets (Ipswich)', 'phone': '0418 857 287' },
-        { 'name': 'Jaye Mallet', 'store': 'Choices Flooring by Mallets (Ipswich)', 'phone': '' },
-        { 'name': 'Georgia Mallet', 'store': 'Choices Flooring by Mallets (Ipswich)', 'phone': '' },
-        { 'name': 'Charlie Mallet', 'store': 'Choices Flooring by Mallets (Ipswich)', 'phone': '' },
-        { 'name': 'Nicholas Mallet', 'store': 'Choices Flooring by Mallets (Ipswich)', 'phone': '' },
-        { 'name': 'Joshua Mallet', 'store': 'Choices Flooring by Mallets (Ipswich)', 'phone': '' },
-        { 'name': 'Emma Semmens', 'store': 'Choices Flooring by Mallets (Ipswich)', 'phone': '' },
-        { 'name': 'Natalie Thomas', 'store': 'Choices Flooring by Max Miller', 'phone': '0488 221 253' },
-        { 'name': 'Kathryn Minter', 'store': 'Choices Flooring by Max Miller', 'phone': '' },
-        { 'name': 'Gemma Thomas', 'store': 'Choices Flooring by Max Miller', 'phone': '' },
-        { 'name': 'Ryan Thomas', 'store': 'Choices Flooring by Max Miller', 'phone': '' },
-        { 'name': 'Stephanie Paull', 'store': 'Choices Flooring by Paulls', 'phone': '0400 252 466' },
-        { 'name': 'Mitchell Guillerme', 'store': 'Choices Flooring by Paulls', 'phone': '' },
-        { 'name': 'Geoff Smith', 'store': 'Choices Flooring by Smiths', 'phone': '0408 397 865' },
-        { 'name': 'Sally Smith', 'store': 'Choices Flooring by Smiths', 'phone': '' },
-        { 'name': 'Ned Smith', 'store': 'Choices Flooring by Smiths', 'phone': '' },
-        { 'name': 'Lawrence Stolz', 'store': 'Choices Flooring by Stolz (Benalla)', 'phone': '0427 622 010' },
-        { 'name': 'Elizabeth Stolz', 'store': 'Choices Flooring by Stolz (Benalla)', 'phone': '' },
-        { 'name': 'Trevor Bonney', 'store': 'Choices Flooring by Swintons (Warrnambool)', 'phone': '0417 145 800' },
-        { 'name': 'Helen  Bonney', 'store': 'Choices Flooring by Swintons (Warrnambool)', 'phone': '' },
-        { 'name': 'Jacqui Thomson', 'store': 'Choices Flooring by Thomsons (Euroa)', 'phone': '0439 952 922' },
-        { 'name': 'Karah Buckley', 'store': 'Choices Flooring by Thomsons (Euroa)', 'phone': '' },
-        { 'name': 'Lexi Koroma', 'store': 'Choices Flooring by Thomsons (Euroa)', 'phone': '' },
-        { 'name': 'Craig Decker', 'store': 'Choices Flooring by Westside (Horsham)', 'phone': '0438 825 499' },
-        { 'name': 'Sallyanne Penny', 'store': 'Choices Flooring by Westside (Horsham)', 'phone': '' },
-        { 'name': 'John Griffiths', 'store': 'Choices Flooring by Westside (Stawell)', 'phone': '0448 355 812' },
-        { 'name': 'Angela Griffiths', 'store': 'Choices Flooring by Westside (Stawell)', 'phone': '' },
-        { 'name': 'Bethany Griffiths', 'store': 'Choices Flooring by Westside (Stawell)', 'phone': '' },
-        { 'name': 'Holly Griffiths', 'store': 'Choices Flooring by Westside (Stawell)', 'phone': '' },
-        { 'name': 'Kirby Griffiths', 'store': 'Choices Flooring by Westside (Stawell)', 'phone': '' },
-        { 'name': 'Tracey Barber', 'store': 'Choices Flooring by Westside (Stawell)', 'phone': '0400 726 514' },
-        { 'name': 'Wayne Barber', 'store': 'Choices Flooring by Westside (Stawell)', 'phone': '' },
-        { 'name': 'Chantelle Barber', 'store': 'Choices Flooring by Westside (Stawell)', 'phone': '' },
-        { 'name': 'Olivia Barber', 'store': 'Choices Flooring by Westside (Stawell)', 'phone': '' },
-        { 'name': 'Leanne Price', 'store': 'Choices Flooring Caringbah', 'phone': '' },
-        { 'name': 'Susan Donnelly', 'store': 'Choices Flooring Caringbah', 'phone': '' },
-        { 'name': 'Stephen Donnelly', 'store': 'Choices Flooring Caringbah', 'phone': '0410 524 861' },
-        { 'name': 'Kenneth Donnelly', 'store': 'Choices Flooring Caringbah', 'phone': '' },
-        { 'name': 'Lesley Donaldson', 'store': 'Choices Flooring Centenary', 'phone': '0408 625 894' },
-        { 'name': 'Kevin Donaldson', 'store': 'Choices Flooring Centenary', 'phone': '' },
-        { 'name': 'Isaac Donaldson', 'store': 'Choices Flooring Centenary', 'phone': '' },
-        { 'name': 'Anthony Frangoulis', 'store': 'Choices Flooring Darwin', 'phone': '0409 873 338' },
-        { 'name': 'Kellie white', 'store': 'Choices Flooring Darwin', 'phone': '' },
-        { 'name': 'Jack Frangoulis', 'store': 'Choices Flooring Darwin', 'phone': '' },
-        { 'name': 'Aliyah Frangoulis', 'store': 'Choices Flooring Darwin', 'phone': '' },
-        { 'name': 'Scarlett Nolan', 'store': 'Choices Flooring Darwin', 'phone': '' },
-        { 'name': 'Amy Michael', 'store': 'Choices Flooring Erina', 'phone': '0415 973 443' },
-        { 'name': 'Jared Michael', 'store': 'Choices Flooring Erina', 'phone': '' },
-        { 'name': 'Tyson Michael', 'store': 'Choices Flooring Erina', 'phone': '' },
-        { 'name': 'Bayley Michael', 'store': 'Choices Flooring Erina', 'phone': '' },
-        { 'name': 'David Gairen', 'store': 'Choices Flooring Esperance', 'phone': '0407 998 533' },
-        { 'name': 'Elisia Gairen', 'store': 'Choices Flooring Esperance', 'phone': '' },
-        { 'name': 'Fraser Gairen', 'store': 'Choices Flooring Esperance', 'phone': '' },
-        { 'name': 'Hudson Gairen', 'store': 'Choices Flooring Esperance', 'phone': '' },
-        { 'name': 'Lacey Gairen', 'store': 'Choices Flooring Esperance', 'phone': '' },
-        { 'name': 'Roxanne Moroney', 'store': 'Choices Flooring Ferntree Gully', 'phone': '0458 889 700' },
-        { 'name': 'Brian Moroney', 'store': 'Choices Flooring Ferntree Gully', 'phone': '' },
-        { 'name': 'Baiden Moroney', 'store': 'Choices Flooring Ferntree Gully', 'phone': '' },
-        { 'name': 'Keira Moroney', 'store': 'Choices Flooring Ferntree Gully', 'phone': '' },
-        { 'name': 'Ethan Moroney', 'store': 'Choices Flooring Ferntree Gully', 'phone': '' },
-        { 'name': 'Todd Maynard', 'store': 'Choices Flooring Forster', 'phone': '' },
-        { 'name': 'Jane Maynard', 'store': 'Choices Flooring Forster', 'phone': '0414 824 169' },
-        { 'name': 'Duane Maynard', 'store': 'Choices Flooring Forster', 'phone': '' },
-        { 'name': 'Connor Maynard', 'store': 'Choices Flooring Forster', 'phone': '' },
-        { 'name': 'Debbie Sumegi', 'store': 'Choices Flooring Fortitude Valley', 'phone': '0418 980 238' },
-        { 'name': 'John Sumegi', 'store': 'Choices Flooring Fortitude Valley', 'phone': '' },
-        { 'name': 'Nicholas Sumegi', 'store': 'Choices Flooring Fortitude Valley', 'phone': '' },
-        { 'name': 'Michelle  Sumegi', 'store': 'Choices Flooring Fortitude Valley', 'phone': '' },
-        { 'name': 'Matthew Rex', 'store': 'Choices Flooring Fortitude Valley', 'phone': '' },
-        { 'name': 'Chaim Sproles', 'store': 'Choices Flooring Fortitude Valley', 'phone': '' },
-        { 'name': 'Jacquelyne Sproles', 'store': 'Choices Flooring Fortitude Valley', 'phone': '' },
-        { 'name': 'Oliver Sproles', 'store': 'Choices Flooring Fortitude Valley', 'phone': '' },
-        { 'name': 'Archer Sproles', 'store': 'Choices Flooring Fortitude Valley', 'phone': '' },
-        { 'name': 'Everly Sproles', 'store': 'Choices Flooring Fortitude Valley', 'phone': '' },
-        { 'name': 'Mitch March', 'store': 'Choices Flooring Geraldton', 'phone': '0409 373 882' },
-        { 'name': 'Abbey March', 'store': 'Choices Flooring Geraldton', 'phone': '' },
-        { 'name': 'Layla March', 'store': 'Choices Flooring Geraldton', 'phone': '' },
-        { 'name': 'Peter Christian', 'store': 'Choices Flooring Hobart', 'phone': '0417 575 221' },
-        { 'name': 'Hue Cam Huynh', 'store': 'Choices Flooring Hobart', 'phone': '' },
-        { 'name': 'David Hodgkinson', 'store': 'Choices Flooring Hobart', 'phone': '' },
-        { 'name': 'Angelique Hodgkinson', 'store': 'Choices Flooring Hobart', 'phone': '' },
-        { 'name': 'Violet Hodgkinson', 'store': 'Choices Flooring Hobart', 'phone': '' },
-        { 'name': 'Xavier Hodgkinson', 'store': 'Choices Flooring Hobart', 'phone': '' },
-        { 'name': 'Ryan Barber', 'store': 'Choices Flooring Hobart', 'phone': '' },
-        { 'name': 'Gabrielle Barber', 'store': 'Choices Flooring Hobart', 'phone': '' },
-        { 'name': 'Nira Barber', 'store': 'Choices Flooring Hobart', 'phone': '' },
-        { 'name': 'Landon Barber', 'store': 'Choices Flooring Hobart', 'phone': '' },
-        { 'name': 'Haken Barber', 'store': 'Choices Flooring Hobart', 'phone': '' },
-        { 'name': 'Ariela Barber', 'store': 'Choices Flooring Hobart', 'phone': '' },
-        { 'name': 'Lesley Smart', 'store': 'Choices Flooring Launceston', 'phone': '0408 449 556' },
-        { 'name': 'Christopher Smart', 'store': 'Choices Flooring Launceston', 'phone': '' },
-        { 'name': 'Macey Smart', 'store': 'Choices Flooring Launceston', 'phone': '' },
-        { 'name': 'Nathan Smart', 'store': 'Choices Flooring Launceston', 'phone': '' },
-        { 'name': 'Nicholas Smart', 'store': 'Choices Flooring Launceston', 'phone': '' },
-        { 'name': 'Mark Winterton', 'store': 'Choices Flooring Narre Warren', 'phone': '0417 577 001' },
-        { 'name': 'Kate Winterton', 'store': 'Choices Flooring Narre Warren', 'phone': '' },
-        { 'name': 'Jake Winterton', 'store': 'Choices Flooring Narre Warren', 'phone': '' },
-        { 'name': 'Ethan Winterton', 'store': 'Choices Flooring Narre Warren', 'phone': '' },
-        { 'name': 'Lachlan Winterton', 'store': 'Choices Flooring Narre Warren', 'phone': '' },
-        { 'name': 'Ivy Winterton', 'store': 'Choices Flooring Narre Warren', 'phone': '' },
-        { 'name': 'Fiona Proctor ', 'store': 'Choices Flooring New Plymouth', 'phone': '0273 282 529' },
-        { 'name': 'Timothy Proctor ', 'store': 'Choices Flooring New Plymouth', 'phone': '' },
-        { 'name': 'Mark Godfrey', 'store': 'Choices Flooring New Plymouth', 'phone': '' },
-        { 'name': 'Warwick McMillan', 'store': 'Choices Flooring Nowra South', 'phone': '' },
-        { 'name': 'Charlene McMillan', 'store': 'Choices Flooring Nowra South', 'phone': '' },
-        { 'name': 'Savannah McMillan', 'store': 'Choices Flooring Nowra South', 'phone': '0411 073 816' },
-        { 'name': 'Charlotte McMillan', 'store': 'Choices Flooring Nowra South', 'phone': '' },
-        { 'name': 'Bianca McMillan', 'store': 'Choices Flooring Nowra South', 'phone': '' },
-        { 'name': 'Shane Valenti', 'store': 'Choices Flooring Parkdale', 'phone': '0413 553 994' },
-        { 'name': 'Sarah Doherty', 'store': 'Choices Flooring Parkdale', 'phone': '' },
-        { 'name': 'Suzanne Treasure', 'store': 'Choices Flooring Port Macquarie', 'phone': '0401 305 944' },
-        { 'name': 'Peter Treasure', 'store': 'Choices Flooring Port Macquarie', 'phone': '' },
-        { 'name': 'Bartholomew Loadsman', 'store': 'Choices Flooring Port Macquarie', 'phone': '' },
-        { 'name': 'Hayley Loadsman', 'store': 'Choices Flooring Port Macquarie', 'phone': '' },
-        { 'name': 'Ian Doherty', 'store': 'Choices Flooring Port Stephens', 'phone': '0418 862 115' },
-        { 'name': 'Elissa Doherty', 'store': 'Choices Flooring Port Stephens', 'phone': '' },
-        { 'name': 'Jye Doherty', 'store': 'Choices Flooring Port Stephens', 'phone': '' },
-        { 'name': 'Hugh Doherty', 'store': 'Choices Flooring Port Stephens', 'phone': '' },
-        { 'name': 'William Doherty', 'store': 'Choices Flooring Port Stephens', 'phone': '' },
-        { 'name': 'Annette Ellis', 'store': 'Choices Flooring Shepparton', 'phone': '0417 651 434' },
-        { 'name': 'Robert Ellis', 'store': 'Choices Flooring Shepparton', 'phone': '' },
-        { 'name': 'Ian Harrison', 'store': 'Choices Flooring Silverwater', 'phone': '0425 281 986' },
-        { 'name': 'Diesel Harrison', 'store': 'Choices Flooring Silverwater', 'phone': '' },
-        { 'name': 'Levi Harrison', 'store': 'Choices Flooring Silverwater', 'phone': '' },
-        { 'name': 'Rod Preston', 'store': 'Choices Flooring Southern Highlands', 'phone': '0412 209 995' },
-        { 'name': 'Lisa Fay', 'store': 'Choices Flooring Southern Highlands', 'phone': '' },
-        { 'name': 'Hugo Fay', 'store': 'Choices Flooring Southern Highlands', 'phone': '' },
-        { 'name': 'Warwick Preston', 'store': 'Choices Flooring Southern Highlands', 'phone': '' },
-        { 'name': 'Kenneth Bradley', 'store': 'Choices Flooring Sunbury', 'phone': '0419 524 738' },
-        { 'name': 'Jennifer Bradley', 'store': 'Choices Flooring Sunbury', 'phone': '' },
-        { 'name': 'Joanne  Russell', 'store': 'Choices Flooring Tamworth', 'phone': '0427 654 043' },
-        { 'name': 'David Russell', 'store': 'Choices Flooring Tamworth', 'phone': '' },
-        { 'name': 'Shane Chillingworth', 'store': 'Choices Flooring Tamworth', 'phone': '' },
-        { 'name': 'Ann Chillingworth', 'store': 'Choices Flooring Tamworth', 'phone': '' },
-        { 'name': 'Jason Fair', 'store': 'Choices Flooring Tauranga', 'phone': '' },
-        { 'name': 'Raewyn Fair', 'store': 'Choices Flooring Tauranga', 'phone': '0274 551 100' },
-        { 'name': 'Malcolm Davison', 'store': 'Choices Flooring Toowoomba', 'phone': '0429 442 044' },
-        { 'name': 'Prudence Davison', 'store': 'Choices Flooring Toowoomba', 'phone': '' },
-        { 'name': 'Robert Ditton', 'store': 'Choices Flooring Tuggerah', 'phone': '0408 475 850' },
-        { 'name': 'Ann Ditton', 'store': 'Choices Flooring Tuggerah', 'phone': '' },
-        { 'name': 'Steven New', 'store': 'Choices Flooring Tuggerah', 'phone': '' },
-        { 'name': 'Megan New', 'store': 'Choices Flooring Tuggerah', 'phone': '' },
-        { 'name': 'Jackson New', 'store': 'Choices Flooring Tuggerah', 'phone': '' },
-        { 'name': 'Abbey New', 'store': 'Choices Flooring Tuggerah', 'phone': '' },
-        { 'name': 'David Lenton', 'store': 'Choices Flooring Wagga', 'phone': '0418 219 137' },
-        { 'name': 'Nicole Lenton', 'store': 'Choices Flooring Wagga', 'phone': '' },
-        { 'name': 'Sidney Lenton', 'store': 'Choices Flooring Wagga', 'phone': '' },
-        { 'name': 'Ruby Lenton', 'store': 'Choices Flooring Wagga', 'phone': '' },
-        { 'name': 'Angus Lenton', 'store': 'Choices Flooring Wagga', 'phone': '' },
-        { 'name': 'Robyn Kuhn', 'store': 'Choices Flooring Warwick', 'phone': '0410 484 192' },
-        { 'name': 'Kirra-Louise Kunh', 'store': 'Choices Flooring Warwick', 'phone': '' },
-        { 'name': 'Lincoln Smith', 'store': 'Choices Flooring by Fletchers', 'phone': '0407 094 147' },
-        { 'name': 'Elizabeth Smith', 'store': 'Choices Flooring by Fletchers', 'phone': '' },
-        { 'name': 'Graham Smith', 'store': 'Choices Flooring by Fletchers', 'phone': '' },
-        { 'name': 'Denise Kennerley', 'store': 'Choices Flooring Helensvale', 'phone': '0487 008 881' },
-        { 'name': 'Ralph Kennerley', 'store': 'Choices Flooring Helensvale', 'phone': '' }
-      ],
-      search: '',
-      fuse: {}
-    }
-  },
-  computed: {
-    filteredMembers () {
-      return this.search ? this.fuse.search(this.search) : this.members
-    }
-  },
-  methods: {
-    viewMember (member) {
-      this.dialog = true
-      this.currentMember = member
-    },
-    call () {
-      window.location.href = 'tel:' + this.currentMember.phone
-    },
-    text () {
-      window.location.href = 'sms:' + this.currentMember.phone
-    },
-    addContact () {
-      if (navigator && navigator.contacts) {
-        let contact = navigator.contacts.create({ 'displayName': this.currentMember.name, phoneNumbers: this.currentMember.phone, organizations: this.currentMember.store })
-        contact.save(() => {alert('Contact Added!') }, () => {
-          alert('Unexpected Error')
-        })
-      } else {
-        alert('Contact management not supported on your device')
-      }
-
-    }
-  },
-  beforeMount () {
-    faker.locale = 'en_AU'
-    // for (let i = 0; i <= 30; i++) {
-    //   const user = {
-    //     name: faker.fake('{{name.firstName}} {{name.lastName}}'),
-    //     phone: faker.phone.phoneNumber(),
-    //     store: 'Choices Flooring ' + faker.address.city()
-    //   }
-    //
-    //   this.members.push(user)
-    // }
-
-    var options = {
-      shouldSort: true,
-      tokenize: true,
-      matchAllTokens: true,
-      //includeMatches: true,
-      threshold: 0.2,
-      location: 0,
-      distance: 100,
-      maxPatternLength: 32,
-      minMatchCharLength: 1,
-      keys: [
-        'name',
-        'store'
-      ]
-    }
-
-    this.fuse = new Fuse(this.members, options)
-  },
-  mounted () {
-
-  }
 }
 </script>
 
-<style lang="scss">
-  .attending-members {
-    .theme--light, .theme--dark {
-      &.v-list {
-        background-color: transparent;
-      }
-
-      .v-list-item {
-        border-bottom: rgba(69, 69, 69, 0.27) solid 1px;
-
-        &:last-of-type {
-          border-bottom: none;
-        }
-      }
-
-      .v-list-item__content {
-        font-family: 'Permanent Marker', cursive;
-        text-transform: uppercase;
-        color: #993333;
-        font-size: 1.35rem;
-      }
-    }
-  }
-</style>

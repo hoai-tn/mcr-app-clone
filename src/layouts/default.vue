@@ -45,7 +45,7 @@
     <v-app-bar app color="gblue" dark>
       <v-fade-transition>
         <img
-          style="position:absolute; top: 0; left: 0; width: 130px;"
+          style="position: absolute; top: 0; left: 0; width: 130px"
           v-if="$route.fullPath === '/'"
           :src="require('../assets/home-logo.svg')"
         />
@@ -75,11 +75,11 @@
     </v-content>
     <!--    </v-fade-transition>-->
 
-    <div style=" margin-top:33%">
+    <div style="margin-top: 33%">
       <v-img
         src="../assets/footer.png"
         contain
-        style="position:absolute; bottom: 0px;"
+        style="position: absolute; bottom: 0px"
       ></v-img>
     </div>
   </v-app>
@@ -98,7 +98,6 @@ export default {
         icon: "fa-home",
         url: "/",
       },
-
       {
         name: "About Thailand",
         icon: "fa-info",
@@ -119,20 +118,23 @@ export default {
             url: "/about-thailand/traveler-tips",
             icon: "",
           },
-            {
+          {
             name: "Useful Phone Numbers - Thailand",
             url: "/about-thailand/useful-phone-thailand",
             icon: "",
           },
         ],
       },
-
       {
         name: "Attending Members",
         icon: "fa-user",
         url: "/attending-members",
       },
-
+      {
+        name: "Dining & Bars Guide",
+        icon: "fa-utensils",
+        url: "/dining-bars-guide",
+      },
       {
         name: "Schedule & Events",
         icon: "fa-calendar-alt",
@@ -301,38 +303,6 @@ export default {
         name: "Weather",
         icon: "fa-cloud",
         url: "/weather",
-      },
-      {
-        name: "About Thailand",
-        icon: "fa-calendar-alt",
-        url: "/about-thailand",
-        children: [
-          {
-            name: "Thai Cooking Class",
-            url: "/events/thai-cooking-class",
-            icon: "fa-hat-chef",
-          },
-          {
-            name: "Zipline & Skywalk",
-            url: "/events/zipline-and-skywalk",
-            icon: "fa-hiking",
-          },
-          {
-            name: "Splash Jungle",
-            url: "/events/splash-jungle",
-            icon: "fa-swimmer",
-          },
-          {
-            name: "Splash Jungle Rides",
-            url: "/events/splash-jungle-rides",
-            icon: "fa-swimming-pool",
-          },
-          {
-            name: "Airstep Golf Day",
-            url: "/events/airstep-golf-day",
-            icon: "fa-golf-ball",
-          },
-        ],
       },
     ],
   }),
